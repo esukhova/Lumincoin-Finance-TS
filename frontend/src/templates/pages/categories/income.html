@@ -1,0 +1,27 @@
+<div class="income-page category-page">
+    <h1 class="mb-4">Доходы</h1>
+    <div class="income-cards cards row row-cols-2 row-cols-md-3 g-3 pt-3" id="income-cards">
+        <div class="col" id="card-plus-col">
+            <div class="card" id="card-plus">
+                <a href="/categories/income/create">+</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-sm-4">
+            <div class="modal-header border-0 justify-content-center">
+                <h1 class="modal-title text-center lh-sm" id="exampleModalLabel">Вы действительно хотите удалить
+                    категорию? Связанные доходы будут удалены навсегда.</h1>
+            </div>
+            <div class="modal-body pt-1">
+                <a href="/categories/income/delete?id=" class="btn btn-success mx-1 py-2 px-3" data-bs-dismiss="modal" id="deleteModalBtn">Да, удалить</a>
+                <a href="/categories/income" class="btn btn-danger mx-1 py-2 px-3" data-bs-dismiss="modal" id="cancelModalBtn">Не удалять</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

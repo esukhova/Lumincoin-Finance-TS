@@ -1,0 +1,22 @@
+<div class="operations-create-page form-page">
+    <h1 class="mb-4">Создание дохода/расхода</h1>
+    <form class="form" id="form">
+        <select class="form-select" id="select-type">
+            <option class="px-3" value="income">Доход</option>
+            <option class="px-3" value="expense">Расход</option>
+        </select>
+        <!--Здесь вставляется <select> c id="select-category"-->
+        <input type="number" id="amount" style="display: none; pointer-events: none;">
+        <div class="form-control d-flex justify-content-start">
+            <div class="look-like-input" id="amount-div" contenteditable="true">0</div>
+            <span>$</span>
+        </div>
+        <span id="look-like-input-error" class="error invalid-feedback">Введите число</span>
+        <input type="text" class="form-control" id="date">
+        <textarea class="form-control mb-3" id="comment" placeholder="Комментарий..."></textarea>
+        <div class="form-buttons">
+            <button type="button" class="btn btn-success mt-1 me-2" id="createBtn">Создать</button>
+            <a href="/operations" class="btn btn-danger mt-1 me-2" id="cancelBtn">Отмена</a>
+        </div>
+    </form>
+</div>

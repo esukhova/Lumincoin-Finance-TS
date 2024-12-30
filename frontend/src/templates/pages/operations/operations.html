@@ -1,0 +1,55 @@
+<div class="operations-page">
+    <h1 class="mb-4">Доходы и расходы</h1>
+    <div class="operations-buttons pt-3">
+        <a type="button" class="btn btn-success me-2 mb-4" id="operations-edit-btn" href="/operations/create?type=income">Создать
+            доход</a>
+        <a type="button" class="btn btn-danger mb-4" id="operations-create-btn" href="/operations/create?type=expense">Создать
+            расход</a>
+    </div>
+    <div class="operations-intervals pt-3 d-flex flex-wrap mb-3 row gy-3" id="operations-intervals">
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3" id="today-btn">Сегодня</button>
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3" id="week-btn">Неделя</button>
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3" id="month-btn">Месяц</button>
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3" id="year-btn">Год</button>
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3 active" id="all-btn">Все</button>
+        <button type="button" class="operations-interval btn btn-outline-secondary me-3" id="interval-btn">Интервал</button>
+        <div class="d-inline-flex align-items-center gap-2 fw-medium">
+            с <input type="text" id="from-interval" class="ms-3" size="8" placeholder="Дата">
+            по <input type="text" id="to-interval" class="ms-3" size="8" placeholder="Дата">
+        </div>
+    </div>
+    <div class="operations-table-wrapper pt-3">
+        <table class="table w-lg-100 text-center overflow-x-auto" id="operations-table">
+            <thead>
+            <tr class="border-top">
+                <th scope="col" style="width: 130px;">№ операции</th>
+                <th scope="col" style="width: 97px;">Тип</th>
+                <th scope="col" style="width: 123px;">Категория</th>
+                <th scope="col" style="width: 99px;">Сумма</th>
+                <th scope="col" style="width: 135px;">Дата</th>
+                <th scope="col" style="width: 223px;">Комментарий</th>
+                <th scope="col" style="width: 70px;"></th>
+            </tr>
+            </thead>
+            <tbody id="records">
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" id="modal-dialog">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header border-0 justify-content-center">
+                    <h1 class="modal-title fs-5 text-center lh-sm" id="exampleModalLabel">Вы действительно хотите
+                        удалить операцию?</h1>
+                </div>
+                <div class="modal-body pt-1">
+                    <a href="/operations/delete?id=" class="btn btn-success mx-1 py-2 px-3" data-bs-dismiss="modal" id="deleteModalBtn">Да, удалить</a>
+                    <a href="/operations" class="btn btn-danger mx-1 py-2 px-3" id="cancelModalBtn" data-bs-dismiss="modal">Не удалять</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
